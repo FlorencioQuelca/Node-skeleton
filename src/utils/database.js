@@ -9,7 +9,16 @@ const db = new Sequelize({
     password: config.db.pass,
     database: config.db.name,
     port: config.db.port,
-    dialectOptions: 
+ 
+})
+
+
+module.exports = db
+
+
+/*
+
+   dialectOptions: 
     process.env.NODE_ENV === 'production'
     ? {
         ssl: {
@@ -17,7 +26,6 @@ const db = new Sequelize({
             rejectUnauthorized: false
         }
     } : {}
-})
 
 
-module.exports = db
+*/
